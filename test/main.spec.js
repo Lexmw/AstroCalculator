@@ -72,6 +72,7 @@ describe('Change Calculator', function () {
         .evaluate(() => document.querySelector('#output').innerText)
         .then(x => expect(x).to.equal(`If you were on ${planetName}, you would weigh ${output}lbs!`))
     }
+  
 
     const planetExpectations = [
       ['Pluto', '100', '6'],
