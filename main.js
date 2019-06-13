@@ -22,19 +22,17 @@ var planets = [
     function pullDown(item) {
         var option = document.createElement("option");
         option.innerHTML = item[0];
-        option.value = item[1];
         select.appendChild(option);
     }
     
       
 
   function calculateWeight(weight, planetName) {
+      var weight = document.getElementById("user-weight").value;
+      var planetName = planets[select.selectedIndex][0];
         for( var i=0; i < planets.length; i++) {
-          // console.log('inside for loop');
-          // console.log(planetName);
             if(planetName == planets[i][0]) {
                 var result = weight * planets[i][1];
-                // console.log(result);
                 return result;
             }
         }
@@ -51,7 +49,7 @@ var planets = [
           var result = calculateWeight(userWeight, planetName);
           // console.log(result);
   //   // 6. Write code to display the message shown in the screenshot.
-          document.getElementById('output').innerText = 'If you were on ' + planetName + ', you would weigh ' + result + 'lbs!';
+          document.getElementById('output').innerHTML = 'If you were on ' + planetName + ', you would weigh ' + result + 'lbs!';
   }
 
   document.getElementById('calculate-button').onclick = () => handleClickEvent();
