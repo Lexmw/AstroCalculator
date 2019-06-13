@@ -44,10 +44,8 @@ var planets = [
           var userWeight = document.getElementById("user-weight").value;
   //   // 4. Create a variable called planetName and assign the name of the selected planet from the drop down.
           var planetName = planets[select.selectedIndex][0];
-          // console.log(planetName)
   //   // 5. Create a variable called result and assign the value of the new calculated weight.
           var result = calculateWeight(userWeight, planetName);
-          // console.log(result);
   //   // 6. Write code to display the message shown in the screenshot.
           document.getElementById('output').innerHTML = 'If you were on ' + planetName + ', you would weigh ' + result + 'lbs!';
   }
